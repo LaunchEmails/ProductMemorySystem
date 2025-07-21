@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Memory System™ - Transform AI Into Your Expert Copywriter</title>
+    <title>Product Memory System™ - Quick Start Guide</title>
     <style>
         * {
             margin: 0;
@@ -13,14 +13,14 @@
         
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.3);
             --success-color: #10b981;
             --warning-color: #f59e0b;
             --error-color: #ef4444;
             --info-color: #3b82f6;
             --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-secondary: rgba(255, 255, 255, 0.9);
             --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
         
@@ -34,7 +34,7 @@
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -42,11 +42,11 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--glass-bg);
             backdrop-filter: blur(30px);
             border-radius: 30px;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             border: 1px solid var(--glass-border);
             position: relative;
             overflow: hidden;
@@ -100,9 +100,9 @@
         }
         
         h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(45deg, #fff, #f0f9ff, #ddd6fe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -125,14 +125,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            gap: 1rem;
+            margin-top: 2rem;
         }
         
         .primary-btn {
             background: linear-gradient(45deg, var(--success-color), #059669);
             color: white;
-            padding: 1.25rem 3rem;
+            padding: 1.25rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -166,71 +166,22 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
         }
         
-        .trust-indicators {
-            display: flex;
-            gap: 2rem;
-            opacity: 0.8;
-            font-size: 0.9rem;
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
         }
         
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        /* Stats Dashboard */
-        .stats-dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-        
-        .stat-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(30px);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid var(--glass-border);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--success-color);
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--success-color);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-            font-weight: 500;
-        }
-        
-        .stat-description {
-            font-size: 0.875rem;
-            opacity: 0.7;
-            margin-top: 0.5rem;
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
         
         /* Section Styling */
@@ -239,7 +190,7 @@
             backdrop-filter: blur(30px);
             border-radius: 25px;
             padding: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             border: 1px solid var(--glass-border);
             position: relative;
         }
@@ -263,139 +214,17 @@
         }
         
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 0;
             color: var(--text-primary);
             font-weight: 700;
         }
         
         h3 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #f0f9ff;
             font-weight: 600;
-        }
-        
-        h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: #e0f2fe;
-            font-weight: 600;
-        }
-        
-        /* Process Steps */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .process-step {
-            background: var(--glass-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-        
-        .step-number {
-            position: absolute;
-            top: -20px;
-            left: 2rem;
-            background: linear-gradient(45deg, var(--error-color), #dc2626);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: var(--shadow);
-        }
-        
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-        }
-        
-        /* Code Blocks */
-        .code-block {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 1rem 0;
-            font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
-            border-left: 4px solid var(--success-color);
-            overflow-x: auto;
-            font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .code-block::before {
-            content: 'CODE';
-            position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-            font-size: 0.7rem;
-            opacity: 0.5;
-            font-weight: 600;
-        }
-        
-        /* Feature Cards */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .feature-card {
-            background: var(--glass-bg);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--success-color);
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--success-color), var(--info-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
         }
         
         /* Alert Boxes */
@@ -406,6 +235,8 @@
             border: 1px solid;
             position: relative;
             padding-left: 3.5rem;
+            color: #ffffff;
+            font-weight: 500;
         }
         
         .alert::before {
@@ -420,45 +251,90 @@
         }
         
         .alert-success {
-            background: linear-gradient(45deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.15));
+            background: linear-gradient(45deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.25));
             border-color: var(--success-color);
+            backdrop-filter: blur(10px);
         }
         
         .alert-success::before {
             background: var(--success-color);
         }
         
-        .alert-warning {
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.15));
-            border-color: var(--warning-color);
-        }
-        
-        .alert-warning::before {
-            background: var(--warning-color);
-        }
-        
-        .alert-error {
-            background: linear-gradient(45deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.15));
-            border-color: var(--error-color);
-        }
-        
-        .alert-error::before {
-            background: var(--error-color);
-        }
-        
         .alert-info {
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.15));
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.25));
             border-color: var(--info-color);
+            backdrop-filter: blur(10px);
         }
         
         .alert-info::before {
             background: var(--info-color);
         }
         
+        .alert-warning {
+            background: linear-gradient(45deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.25));
+            border-color: var(--warning-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .alert-warning::before {
+            background: var(--warning-color);
+        }
+        
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .process-step {
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(45deg, var(--error-color), #dc2626);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        
         /* Lists */
         ul {
             list-style: none;
             margin: 1rem 0;
+        }
+        
+        ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
         }
         
         ul li {
@@ -481,175 +357,126 @@
             color: #f0f9ff;
         }
         
-        /* Examples */
-        .examples {
-            background: rgba(0, 0, 0, 0.2);
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
             padding: 2rem;
             border-radius: 15px;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .copy-example {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 0.75rem 0;
-            font-family: monospace;
-            font-size: 0.9rem;
-            border-left: 3px solid var(--success-color);
-            transition: all 0.2s ease;
-        }
-        
-        .copy-example:hover {
-            background: rgba(0, 0, 0, 0.4);
-            border-left-width: 5px;
-        }
-        
-        /* Platform Instructions */
-        .platform-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
             margin: 2rem 0;
+            border: 1px solid var(--info-color);
+            backdrop-filter: blur(10px);
         }
         
-        .platform-card {
-            background: var(--glass-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-        }
-        
-        .platform-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-        
-        .platform-header {
+        .example-variable {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            flex-wrap: wrap;
+            backdrop-filter: blur(5px);
         }
         
-        .platform-icon {
-            font-size: 1.5rem;
+        .variable-name {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            word-break: break-word;
+            font-weight: 600;
         }
         
-        /* Timeline */
-        .timeline {
+        .variable-value {
+            flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .example-variable {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .variable-name {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .variable-value {
+                width: 100%;
+            }
+        }
+        
+        .variable-value {
+            font-weight: 600;
+            color: #f0f9ff;
+        }
+        
+        /* Code Block */
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+            border-left: 4px solid var(--success-color);
+            overflow-x: auto;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: 'PROMPT';
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            font-weight: 600;
+        }
+        
+        /* Stats Cards */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
         
-        .timeline-item {
+        .stat-card {
             background: var(--glass-bg);
             padding: 1.5rem;
             border-radius: 15px;
             text-align: center;
             border: 1px solid var(--glass-border);
-            position: relative;
             transition: all 0.3s ease;
         }
         
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 10px;
-            height: 10px;
-            background: var(--success-color);
-            border-radius: 50%;
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
         }
         
-        .timeline-item:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Comparison */
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .comparison-card {
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid;
-        }
-        
-        .mistakes-card {
-            background: rgba(239, 68, 68, 0.1);
-            border-color: var(--error-color);
-        }
-        
-        .best-practices-card {
-            background: rgba(16, 185, 129, 0.1);
-            border-color: var(--success-color);
-        }
-        
-        /* ROI Calculator */
-        .roi-calculator {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid var(--success-color);
-            margin: 3rem 0;
-        }
-        
-        .calculator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .calculator-item {
-            text-align: center;
-        }
-        
-        .calculator-value {
+        .stat-number {
             font-size: 2rem;
             font-weight: bold;
             color: var(--success-color);
             display: block;
+            margin-bottom: 0.5rem;
         }
         
-        /* Case Studies */
-        .case-study {
-            background: var(--glass-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 1.5rem 0;
-            border: 1px solid var(--glass-border);
-            border-left: 4px solid var(--success-color);
-        }
-        
-        .case-study-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .case-study-avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, var(--success-color), var(--info-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         
         /* Responsive Design */
@@ -659,7 +486,7 @@
             }
             
             .hero {
-                padding: 4rem 1rem;
+                padding: 3rem 1rem;
             }
             
             h1 {
@@ -670,17 +497,12 @@
                 padding: 2rem;
             }
             
-            .comparison {
+            .process-steps {
                 grid-template-columns: 1fr;
             }
             
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .trust-indicators {
+            .cta-container {
                 flex-direction: column;
-                gap: 1rem;
             }
         }
         
@@ -693,63 +515,6 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-        
-        /* Progress Bar */
-        .progress-container {
-            background: rgba(0, 0, 0, 0.2);
-            height: 8px;
-            border-radius: 4px;
-            margin: 1rem 0;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--success-color), var(--info-color));
-            border-radius: 4px;
-            transition: width 1s ease;
-        }
-        
-        /* Interactive Elements */
-        .interactive-demo {
-            background: var(--glass-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid var(--glass-border);
-            margin: 2rem 0;
-        }
-        
-        .demo-input {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            color: white;
-            font-size: 1rem;
-        }
-        
-        .demo-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .demo-output {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border-left: 4px solid var(--success-color);
-        }
     </style>
 </head>
 <body>
@@ -761,741 +526,227 @@
                     <div class="logo">🚀</div>
                     <span class="brand-text">Product Memory System™</span>
                 </div>
-                <h1>Transform AI Into Your Expert Copywriter</h1>
-                <p class="subtitle">The only framework you need to turn ChatGPT, Claude, or Gemini into a copywriting machine that knows your brand, audience, and methodology at a deep level</p>
+                <h1>Quick Start Guide</h1>
+                <p class="subtitle">Transform any AI into your personal email copywriter in under 30 minutes</p>
                 
                 <div class="cta-container">
                     <a href="https://drive.google.com/file/d/1AsyS54Vw3sOHgxdb05LeqDZmUdiL7LwG/view?usp=drive_link" class="primary-btn">
-                        📥 Get Complete System + Templates
+                        📥 Get Complete System
                     </a>
-                    <div class="trust-indicators">
-                        <div class="trust-item">
-                            <span>✓</span>
-                            <span>Works with any AI model</span>
-                        </div>
-                        <div class="trust-item">
-                            <span>✓</span>
-                            <span>Complete implementation guide</span>
-                        </div>
-                        <div class="trust-item">
-                            <span>✓</span>
-                            <span>Proven by 10,000+ marketers</span>
-                        </div>
-                    </div>
+                    <a href="https://launchemails.github.io/Complete-Advanced-Setup-Guide/" class="secondary-btn">
+                        🔧 Advanced Setup Guide →
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Stats Dashboard -->
-        <div class="stats-dashboard fade-in">
-            <div class="stat-card">
-                <span class="stat-number">40-60%</span>
-                <div class="stat-label">Faster Copy Creation</div>
-                <div class="stat-description">Cut your copywriting time in half</div>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 60%"></div>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">25-40%</span>
-                <div class="stat-label">Higher Conversions</div>
-                <div class="stat-description">More sales from the same traffic</div>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 40%"></div>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">100%</span>
-                <div class="stat-label">Brand Consistency</div>
-                <div class="stat-description">Never worry about off-brand copy again</div>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">∞</span>
-                <div class="stat-label">Unlimited Scale</div>
-                <div class="stat-description">Generate copy for any channel, any time</div>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 95%"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ROI Calculator -->
-        <div class="roi-calculator fade-in">
-            <div class="section-header">
-                <div class="section-icon">📊</div>
-                <h2>ROI Calculator: What This System Is Worth To You</h2>
-            </div>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Based on industry averages, here's the potential value of implementing the Product Memory System™:</p>
-            
-            <div class="calculator-grid">
-                <div class="calculator-item">
-                    <span class="calculator-value">20hrs</span>
-                    <div>Time saved per month</div>
-                    <div style="font-size: 0.9rem; opacity: 0.8;">@ $100/hr = $2,000 value</div>
-                </div>
-                <div class="calculator-item">
-                    <span class="calculator-value">35%</span>
-                    <div>Average conversion lift</div>
-                    <div style="font-size: 0.9rem; opacity: 0.8;">On $10k revenue = $3,500 boost</div>
-                </div>
-                <div class="calculator-item">
-                    <span class="calculator-value">$5,500</span>
-                    <div>Monthly value increase</div>
-                    <div style="font-size: 0.9rem; opacity: 0.8;">Conservative estimate</div>
-                </div>
-                <div class="calculator-item">
-                    <span class="calculator-value">$66,000</span>
-                    <div>Annual ROI potential</div>
-                    <div style="font-size: 0.9rem; opacity: 0.8;">Just from one implementation</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- What is the Product Memory System -->
-        <div class="section fade-in" id="what-is">
+        <!-- What Is Section -->
+        <div class="section fade-in">
             <div class="section-header">
                 <div class="section-icon">🎯</div>
                 <h2>What Is the Product Memory System™?</h2>
             </div>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">The Product Memory System™ is a comprehensive contextual framework that transforms AI models (ChatGPT, Claude, Gemini) into expert copywriters who understand your business, audience, and methodology at a deep level.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The Product Memory System™ is a pre-built template that you fill out once with your business details, then paste into ChatGPT, Claude, or any AI before writing emails. Instead of getting generic AI responses, you get personalized emails that sound exactly like your brand and speak directly to your audience's needs.</p>
             
             <div class="alert alert-success">
-                <h3>🔄 The Problem With Generic AI Prompts</h3>
-                <p>When you ask AI to "write me a sales email," you get generic, template-style copy that sounds like everyone else. It doesn't know your audience's specific pain points, your unique voice, or your proven frameworks.</p>
-            </div>
-            
-            <div class="alert alert-info">
-                <h3>✨ The Product Memory System™ Solution</h3>
-                <p>Instead, you get an AI that knows your audience's pain points, speaks in your voice, references your framework, and creates copy that converts because it understands your entire business ecosystem. It's like having a senior copywriter who's worked with your brand for years.</p>
-            </div>
-
-            <!-- Interactive Demo -->
-            <div class="interactive-demo">
-                <h4>Try It: See The Difference</h4>
-                <p><strong>Generic AI Prompt:</strong></p>
-                <div class="demo-output">
-                    "Subject: Don't Miss Out!
-                    
-Hi there! We have an amazing offer that you won't want to miss. Our product can help you achieve your goals faster than ever before. Click here to learn more!"
-                </div>
-                
-                <p style="margin-top: 1.5rem;"><strong>Product Memory System™ Output:</strong></p>
-                <div class="demo-output">
-                    "Subject: The 3AM Problem That's Costing You $50K/Year
-                    
-Hi Sarah,
-                    
-I know you're lying awake at 3AM wondering if your marketing copy will ever convert like those case studies you keep reading about.
-                    
-Here's what I've learned after helping 500+ coaches like you: The problem isn't your offer or your traffic. It's that your copy sounds like everyone else in your space.
-                    
-My Copy DNA Framework™ fixes this by..."
-                </div>
+                <strong>Think of it as giving AI a "memory" of your business, customers, and voice.</strong>
             </div>
         </div>
 
-        <!-- Case Studies -->
+        <!-- How It Works -->
         <div class="section fade-in">
             <div class="section-header">
-                <div class="section-icon">📈</div>
-                <h2>Real Results From Real Users</h2>
+                <div class="section-icon">⚙️</div>
+                <h2>How It Works</h2>
             </div>
             
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div class="case-study-avatar">SM</div>
-                    <div>
-                        <h4>Sarah Mitchell - Business Coach</h4>
-                        <p style="opacity: 0.8;">6-figure coaching business</p>
-                    </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                <div style="background: rgba(239, 68, 68, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--error-color);">
+                    <h3 style="color: var(--error-color); font-size: 1.1rem;">❌ Traditional AI Prompting</h3>
+                    <p style="font-style: italic;">"Write me a sales email"</p>
+                    <p style="margin-top: 1rem; opacity: 0.8;">→ Generic, template-style email</p>
                 </div>
-                <p>"Before the Product Memory System™, I was spending 6 hours writing one sales email. Now I generate 5 high-converting emails in 30 minutes. My last launch generated $127k - 40% more than my previous best."</p>
-                <div style="margin-top: 1rem;">
-                    <strong style="color: var(--success-color);">Result: 40% revenue increase, 90% time savings</strong>
-                </div>
-            </div>
-            
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div class="case-study-avatar">MJ</div>
-                    <div>
-                        <h4>Marcus Johnson - SaaS Founder</h4>
-                        <p style="opacity: 0.8;">B2B Software Company</p>
-                    </div>
-                </div>
-                <p>"Our conversion rates jumped from 2.1% to 3.4% across all our landing pages after implementing this system. The AI now writes copy that sounds exactly like our brand voice, and our customers notice the difference."</p>
-                <div style="margin-top: 1rem;">
-                    <strong style="color: var(--success-color);">Result: 62% conversion rate increase</strong>
+                
+                <div style="background: rgba(16, 185, 129, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--success-color);">
+                    <h3 style="color: var(--success-color); font-size: 1.1rem;">✅ With Product Memory System™</h3>
+                    <p style="font-style: italic;">AI already knows your audience, pain points, offer, and voice</p>
+                    <p style="margin-top: 1rem; opacity: 0.8;">→ Personalized, converting email</p>
                 </div>
             </div>
             
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div class="case-study-avatar">LP</div>
-                    <div>
-                        <h4>Lisa Park - Agency Owner</h4>
-                        <p style="opacity: 0.8;">Digital Marketing Agency</p>
-                    </div>
-                </div>
-                <p>"I implemented this for 8 different clients. Every single one saw improved performance. We've been able to scale our copywriting output 10x without hiring additional writers. Game changer."</p>
-                <div style="margin-top: 1rem;">
-                    <strong style="color: var(--success-color);">Result: 10x output scaling, 100% client success rate</strong>
-                </div>
-            </div>
+            <p>The system works by loading a detailed context about your business into the AI's memory before you ask it to write anything. You only need to set this up once, then reuse it for every email.</p>
         </div>
 
-        <!-- Quick Start Guide -->
-        <div class="section fade-in" id="quick-start">
+        <!-- Step-by-Step Instructions -->
+        <div class="section fade-in">
             <div class="section-header">
-                <div class="section-icon">⚡</div>
-                <h2>Quick Start Guide</h2>
+                <div class="section-icon">📝</div>
+                <h2>Step-by-Step Instructions</h2>
             </div>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Get your first high-converting copy in under 30 minutes with this proven 3-step process:</p>
             
-            <div class="process-grid">
+            <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <div class="step-title">Customize Your Variables</div>
-                    <p>Replace all example values with your specific business information. The system includes 47+ variables to customize, but focus on these critical sections first:</p>
-                    <ul>
-                        <li><strong>{{audience_type}}</strong> and <strong>{{audience_profile}}</strong> - Who exactly you serve</li>
-                        <li><strong>{{offer}}</strong> and <strong>{{price_point}}</strong> - What you're selling and for how much</li>
-                        <li><strong>{{tone_style}}</strong> and <strong>{{voice_examples}}</strong> - How you sound</li>
-                        <li><strong>{{core_framework}}</strong> and <strong>signature method</strong> - Your unique approach</li>
-                    </ul>
-                    <div class="alert alert-warning">
-                        <strong>Pro Tip:</strong> The more specific you are, the better your results. "Online entrepreneurs" vs "7-figure course creators struggling with launch copy" makes all the difference.
-                    </div>
+                    <div class="step-title">Download the Template</div>
+                    <p>Get the complete Product Memory System™ with all variables and instructions. This contains over 40 customizable fields covering your audience, offer, voice, and methodology.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <div class="step-title">Load Into AI Model</div>
-                    <p>Copy your customized system and paste it at the start of a new conversation, followed by this activation prompt:</p>
-                    <div class="code-block">
-"You are now loaded with my Product Memory System™. Act as an expert copywriter who knows my brand, audience, and methodology intimately. Every piece of copy you create must reflect my authentic voice, address my audience's specific pain points, and align with my proven framework. Ready to write high-converting copy?"
-                    </div>
-                    <div class="alert alert-info">
-                        <strong>Works with:</strong> ChatGPT, Claude, Gemini, and any other text-based AI model. The system is platform agnostic.
-                    </div>
+                    <div class="step-title">Fill in Your Details</div>
+                    <p>Replace the placeholder text with your specific information. Focus on these critical sections first:</p>
+                    <ul>
+                        <li><strong>{{audience_type}}</strong> - Who exactly you serve</li>
+                        <li><strong>{{offer}}</strong> - Your main product/service</li>
+                        <li><strong>{{voice_examples}}</strong> - Your actual sentences</li>
+                    </ul>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <div class="step-title">Start Creating</div>
-                    <p>Request any type of marketing copy. The AI will automatically pull from your loaded context to create authentic, on-brand content that converts.</p>
-                    <div class="examples">
-                        <h4>Try these requests:</h4>
-                        <div class="copy-example">"Write a sales email for my {{offer}} targeting {{common_pain_point}}"</div>
-                        <div class="copy-example">"Create a LinkedIn post about {{your_unique_insight}}"</div>
-                        <div class="copy-example">"Write objection-handling copy for {{price_point}}"</div>
-                        <div class="copy-example">"Create a video script for {{transformation_result}}"</div>
-                    </div>
-                    <div class="alert alert-success">
-                        <strong>The Result:</strong> Copy that sounds like you wrote it, addresses your audience's specific needs, and converts at industry-leading rates.
-                    </div>
+                    <div class="step-title">Save Your System</div>
+                    <p>Save your filled-out template in an easily accessible place (Google Doc, Notes app, etc.). You'll use this every time you write emails.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Detailed Implementation Process -->
-        <div class="section fade-in" id="implementation">
-            <div class="section-header">
-                <div class="section-icon">🔧</div>
-                <h2>Detailed Implementation Process</h2>
-            </div>
-            
-            <h3>Phase 1: System Customization (Week 1)</h3>
-            <div class="alert alert-error">
-                <strong>⚠️ Critical:</strong> The system only works when properly customized. Generic placeholder text will produce generic results. This is where 80% of your success comes from.
-            </div>
-            
-            <h4>Essential Variables to Customize First:</h4>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h4>Audience Variables</h4>
-                    <p><strong>{{audience_type}}</strong> - Who they are<br>
-                    <strong>{{audience_profile}}</strong> - Demographics & psychographics<br>
-                    <strong>{{purchase_intent}}</strong> - Why they buy</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h4>Offer Variables</h4>
-                    <p><strong>{{offer}}</strong> - What you're selling<br>
-                    <strong>{{price_point}}</strong> - Cost and positioning<br>
-                    <strong>{{bonus_offer}}</strong> - Additional value</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h4>Voice Variables</h4>
-                    <p><strong>{{tone_style}}</strong> - How you sound<br>
-                    <strong>{{voice_examples}}</strong> - Real samples<br>
-                    <strong>{{personality_traits}}</strong> - Character</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Framework Variables</h4>
-                    <p><strong>{{core_framework}}</strong> - Your methodology<br>
-                    <strong>{{signature_method}}</strong> - Unique approach<br>
-                    <strong>Implementation steps</strong> - How it works</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h4>Proof Variables</h4>
-                    <p><strong>{{testimonial}}</strong> - Customer stories<br>
-                    <strong>{{specific_achievement}}</strong> - Results<br>
-                    <strong>Case studies</strong> - Detailed examples</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">😰</div>
-                    <h4>Pain Point Variables</h4>
-                    <p><strong>{{common_pain_point}}</strong> - Main struggles<br>
-                    <strong>{{objections}}</strong> - Why they don't buy<br>
-                    <strong>{{frustrations}}</strong> - Daily challenges</p>
-                </div>
-            </div>
-            
-            <h3 style="margin-top: 3rem;">Phase 2: AI Model Loading (Week 1-2)</h3>
-            <p>Choose your preferred AI platform and follow these specific instructions:</p>
-            
-            <div class="platform-grid">
-                <div class="platform-card">
-                    <div class="platform-header">
-                        <span class="platform-icon">🤖</span>
-                        <h4>For ChatGPT</h4>
-                    </div>
-                    <ol style="list-style: decimal; margin-left: 1.5rem;">
-                        <li>Start a new conversation (important for clean context)</li>
-                        <li>Paste your complete customized system</li>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Load Into AI</div>
+                    <p>Every time you want to write an email:</p>
+                    <ol style="padding-left: 1rem; margin-top: 1rem;">
+                        <li>Start a new conversation with your AI</li>
+                        <li>Paste your complete Product Memory System™</li>
                         <li>Add the activation prompt</li>
-                        <li>Wait for confirmation before requesting copy</li>
-                        <li>Test with a simple request to verify it's working</li>
+                        <li>Request your email</li>
                     </ol>
-                    <div class="alert alert-info" style="margin-top: 1rem;">
-                        <strong>ChatGPT Pro Tip:</strong> Use GPT-4 for best results. The system works with GPT-3.5 but GPT-4 follows complex instructions more accurately.
-                    </div>
+                </div>
+            </div>
+            
+            <div class="alert alert-info" style="margin-top: 2rem;">
+                <strong>Activation Prompt:</strong>
+                <div class="code-block" style="margin-top: 1rem;">
+"You are now loaded with my Product Memory System™. Act as an expert copywriter who knows my brand, audience, and methodology intimately. Ready to write high-converting emails?"
+                </div>
+            </div>
+        </div>
+
+        <!-- Pro Tips -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <h2>Pro Tips</h2>
+            </div>
+            
+            <ul>
+                <li><strong>Be Specific:</strong> "Online entrepreneurs" vs "7-figure course creators struggling with email open rates" - specificity wins</li>
+                <li><strong>Update Regularly:</strong> Add new testimonials, voice examples, and successful copy samples monthly</li>
+                <li><strong>Create Variations:</strong> Make separate versions for different products or audience segments</li>
+                <li><strong>Test Different AIs:</strong> Try the same system with ChatGPT, Claude, and Gemini to see which works best</li>
+                <li><strong>Save Examples:</strong> Keep a folder of AI-generated emails that performed well to add back into your system</li>
+                <li><strong>Start Simple:</strong> Fill out the core fields first, then add more detail over time</li>
+            </ul>
+        </div>
+
+        <!-- Pre-Filled Example -->
+        <div class="section fade-in">
+            <div class="section-header">
+                <div class="section-icon">📋</div>
+                <h2>Pre-Filled Example</h2>
+            </div>
+            
+            <div class="example-box">
+                <h3 style="color: var(--info-color); margin-bottom: 1.5rem;">Sample for an Online Course Creator:</h3>
+                
+                <div class="example-variable">
+                    <div class="variable-name">{{audience_type}}</div>
+                    <div class="variable-value">Online course creators earning $5K-50K/month who struggle with consistent email marketing</div>
                 </div>
                 
-                <div class="platform-card">
-                    <div class="platform-header">
-                        <span class="platform-icon">🔮</span>
-                        <h4>For Claude</h4>
-                    </div>
-                    <ol style="list-style: decimal; margin-left: 1.5rem;">
-                        <li>Begin a fresh conversation</li>
-                        <li>Paste your system in full (Claude handles long contexts well)</li>
-                        <li>Include the activation prompt</li>
-                        <li>Claude will confirm understanding with a summary</li>
-                        <li>Start with your first copy request</li>
-                    </ol>
-                    <div class="alert alert-success" style="margin-top: 1rem;">
-                        <strong>Claude Advantage:</strong> Excellent at maintaining context throughout long conversations. Great for iterative copy refinement.
-                    </div>
+                <div class="example-variable">
+                    <div class="variable-name">{{offer}}</div>
+                    <div class="variable-value">Email Mastery Blueprint - 90-day program teaching the Revenue Multiplication Method</div>
                 </div>
                 
-                <div class="platform-card">
-                    <div class="platform-header">
-                        <span class="platform-icon">💎</span>
-                        <h4>For Gemini</h4>
-                    </div>
-                    <ol style="list-style: decimal; margin-left: 1.5rem;">
-                        <li>Open a new chat session</li>
-                        <li>Load your complete system</li>
-                        <li>Use the activation prompt</li>
-                        <li>Verify the system is loaded properly with a test</li>
-                        <li>Begin generating copy</li>
-                    </ol>
-                    <div class="alert alert-warning" style="margin-top: 1rem;">
-                        <strong>Gemini Note:</strong> May require more specific prompts. Be explicit about what you want in each request.
-                    </div>
-                </div>
-            </div>
-            
-            <h3 style="margin-top: 3rem;">Phase 3: Copy Generation & Optimization (Week 2+)</h3>
-            <p>Once loaded, you can request any type of marketing copy. Here's how to get the best results:</p>
-            
-            <div class="examples">
-                <h4>High-Converting Copy Requests:</h4>
-                <div class="copy-example">• "Write a sales email for {{offer}} targeting {{common_pain_point}}"</div>
-                <div class="copy-example">• "Create a landing page headline using {{core_framework}}"</div>
-                <div class="copy-example">• "Develop a nurture sequence for {{free_resource}}"</div>
-                <div class="copy-example">• "Write social media posts about {{specific_topic}}"</div>
-                <div class="copy-example">• "Create objection-handling copy for {{price_point}}"</div>
-                <div class="copy-example">• "Write a video script showcasing {{transformation_result}}"</div>
-                <div class="copy-example">• "Create ad copy for {{target_demographic}} interested in {{solution}}"</div>
-            </div>
-        </div>
-
-        <!-- Advanced Usage Strategies -->
-        <div class="section fade-in" id="advanced-strategies">
-            <div class="section-header">
-                <div class="section-icon">🚀</div>
-                <h2>Advanced Usage Strategies</h2>
-            </div>
-            
-            <h3>Layered Context Building</h3>
-            <p>For maximum effectiveness, add campaign-specific context on top of your base system:</p>
-            
-            <div class="alert alert-info">
-                <h4>Campaign-Specific Context Example:</h4>
-                <div class="code-block">
-"For this Black Friday campaign, also consider:
-- 48-hour flash sale urgency
-- Holiday shopping motivations  
-- Gift-giving angles for business owners
-- Year-end budget considerations
-- Q4 goal achievement pressure"
-                </div>
-            </div>
-            
-            <h3>Iterative Refinement Process</h3>
-            <p>Use these specific feedback prompts to improve copy quality:</p>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h4>Tone Adjustments</h4>
-                    <ul style="text-align: left;">
-                        <li>"Make this more conversational and less formal"</li>
-                        <li>"Add more excitement and energy"</li>
-                        <li>"Tone down the hype, make it more trustworthy"</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h4>Content Enhancements</h4>
-                    <ul style="text-align: left;">
-                        <li>"Add more emotional triggers related to {{pain_point}}"</li>
-                        <li>"Include a specific reference to {{core_framework}}"</li>
-                        <li>"Add social proof using {{testimonial}}"</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h4>Urgency & Scarcity</h4>
-                    <ul style="text-align: left;">
-                        <li>"Strengthen the urgency without being pushy"</li>
-                        <li>"Add deadline pressure for {{limited_offer}}"</li>
-                        <li>"Create FOMO around {{exclusive_access}}"</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h3>Multi-Format Adaptation</h3>
-            <p>Turn one piece of copy into content for every channel:</p>
-            <div class="code-block">
-"Take this email and adapt it for:
-• LinkedIn post (professional tone)
-• Instagram caption (visual storytelling)
-• Twitter thread (bite-sized insights)
-• Facebook ad copy (scroll-stopping hook)
-• Video script (spoken delivery)
-• Blog post outline (detailed exploration)"
-            </div>
-            
-            <h3>A/B Testing Variations</h3>
-            <p>Generate multiple versions to test what works best:</p>
-            <div class="code-block">
-"Create 3 different subject lines for this email:
-1. Curiosity-driven approach
-2. Benefit-focused approach  
-3. Problem-agitation approach
-
-Make each distinctly different in style and psychological trigger."
-            </div>
-        </div>
-
-
-
-        <!-- Common Mistakes & Solutions -->
-        <div class="section fade-in" id="mistakes-solutions">
-            <div class="section-header">
-                <div class="section-icon">⚠️</div>
-                <h2>Common Mistakes That Kill Results</h2>
-            </div>
-            <p style="margin-bottom: 2rem;">Avoid these critical errors that cause 90% of implementations to fail:</p>
-            
-            <div class="comparison">
-                <div class="comparison-card mistakes-card">
-                    <h3>❌ Mistakes That Kill Performance</h3>
-                    <ul>
-                        <li><strong>Using generic placeholder text</strong> - "Business owners" instead of "7-figure course creators struggling with launch copy"</li>
-                        <li><strong>Not customizing voice examples</strong> - Leaving template examples instead of your actual writing</li>
-                        <li><strong>Skipping pain point details</strong> - "Marketing struggles" vs "Lying awake at 3AM wondering why your emails get 0.5% clicks"</li>
-                        <li><strong>Incomplete framework description</strong> - Just naming it vs explaining how it works step-by-step</li>
-                        <li><strong>Missing social proof</strong> - No real customer names, results, or stories</li>
-                        <li><strong>Vague audience definition</strong> - Demographics only, no psychographics or motivations</li>
-                        <li><strong>Loading multiple systems</strong> - Confusing the AI with conflicting contexts</li>
-                        <li><strong>Not testing the system</strong> - Assuming it works without verifying output quality</li>
-                    </ul>
+                <div class="example-variable">
+                    <div class="variable-name">{{price_point}}</div>
+                    <div class="variable-value">$2,997 or 3 payments of $1,097</div>
                 </div>
                 
-                <div class="comparison-card best-practices-card">
-                    <h3>✅ Best Practices That Drive Results</h3>
-                    <ul>
-                        <li><strong>Highly specific audience details</strong> - Include income level, experience, current challenges, and goals</li>
-                        <li><strong>Authentic voice examples</strong> - Use actual sentences from your best-performing content</li>
-                        <li><strong>Detailed pain point descriptions</strong> - Include emotional language and specific scenarios</li>
-                        <li><strong>Complete framework breakdown</strong> - Step-by-step process with examples and benefits</li>
-                        <li><strong>Specific social proof stories</strong> - Real names, exact results, detailed transformations</li>
-                        <li><strong>Clear transformation outcomes</strong> - Before and after states with measurable results</li>
-                        <li><strong>Regular system updates</strong> - Keep evolving based on new wins and insights</li>
-                        <li><strong>Systematic testing process</strong> - Start simple and gradually increase complexity</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="alert alert-warning" style="margin-top: 2rem;">
-                <h4>🎯 The #1 Success Factor</h4>
-                <p><strong>Specificity beats generality every time.</strong> The more specific and detailed your system customization, the better your results. Generic inputs = generic outputs. Specific inputs = breakthrough copy.</p>
-            </div>
-        </div>
-
-        <!-- Optimization & Maintenance -->
-        <div class="section fade-in" id="optimization">
-            <div class="section-header">
-                <div class="section-icon">🔧</div>
-                <h2>System Optimization & Maintenance</h2>
-            </div>
-            
-            <h3>Regular Update Schedule</h3>
-            <p>Keep your system performing at peak levels with these maintenance practices:</p>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Weekly</h4>
-                    <p>Add new voice examples from recent high-performing content</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Monthly</h4>
-                    <p>Update testimonials and case studies with fresh results</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Quarterly</h4>
-                    <p>Refine audience definitions based on customer feedback</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Annually</h4>
-                    <p>Complete system overhaul with evolved frameworks and offerings</p>
-                </div>
-            </div>
-            
-            <h3>Performance Tracking Metrics</h3>
-            <p>Monitor these KPIs to measure your system's effectiveness:</p>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h4>Email Performance</h4>
-                    <ul style="text-align: left;">
-                        <li>Open rates (target: 25%+)</li>
-                        <li>Click rates (target: 5%+)</li>
-                        <li>Reply rates (target: 2%+)</li>
-                        <li>Unsubscribe rates (target: <0.5%)</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h4>Conversion Metrics</h4>
-                    <ul style="text-align: left;">
-                        <li>Landing page conversion rates</li>
-                        <li>Sales page conversion rates</li>
-                        <li>Email-to-sale conversion</li>
-                        <li>Cost per acquisition</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h4>Social Engagement</h4>
-                    <ul style="text-align: left;">
-                        <li>Likes and reactions</li>
-                        <li>Comments and shares</li>
-                        <li>Profile visits from posts</li>
-                        <li>DMs generated</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h4>Qualitative Feedback</h4>
-                    <ul style="text-align: left;">
-                        <li>Customer replies and comments</li>
-                        <li>Sales team feedback</li>
-                        <li>Brand voice consistency</li>
-                        <li>Message clarity ratings</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Advanced Features -->
-        <div class="section fade-in" id="advanced-features">
-            <div class="section-header">
-                <div class="section-icon">🌟</div>
-                <h2>Advanced Features & Use Cases</h2>
-            </div>
-            
-            <h3>Multi-Brand Management</h3>
-            <p>Scale across multiple brands or offerings with separate system versions:</p>
-            <div class="code-block">
-"Product Memory System™ - [Brand Name] - [Offer Name]
-Version: 2.1 | Last Updated: [Date] | Performance: [Metrics]"
-            </div>
-            <div class="alert alert-info">
-                <strong>Pro Strategy:</strong> Create master templates for each vertical (coaching, SaaS, ecommerce) then customize for specific brands. This speeds up onboarding new clients or products.
-            </div>
-            
-            <h3>Team Collaboration Workflows</h3>
-            <p>Implement across your entire team for consistent brand voice:</p>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h4>Virtual Assistants</h4>
-                    <p>Social media posting, email responses, basic content creation</p>
-                    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
-                        <strong>Access Level:</strong> Core system + specific content guidelines
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✍️</div>
-                    <h4>Copywriters</h4>
-                    <p>Sales pages, email sequences, ad copy, video scripts</p>
-                    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
-                        <strong>Access Level:</strong> Full system + advanced prompts + performance data
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎧</div>
-                    <h4>Customer Success</h4>
-                    <p>Support responses, onboarding emails, retention messaging</p>
-                    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
-                        <strong>Access Level:</strong> Voice guidelines + customer pain points + solutions
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h4>Sales Team</h4>
-                    <p>Outreach sequences, follow-ups, proposal language, objection handling</p>
-                    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
-                        <strong>Access Level:</strong> Sales-focused system + objection library + case studies
-                    </div>
-                </div>
-            </div>
-            
-            <h3>Campaign-Specific Variations</h3>
-            <p>Layer temporary context for special campaigns:</p>
-            <div class="examples">
-                <h4>Seasonal Campaign Additions:</h4>
-                <div class="code-block">
-"HOLIDAY CAMPAIGN CONTEXT:
-- Black Friday/Cyber Monday urgency
-- Gift-giving motivations for business tools
-- Year-end budget considerations 
-- Q4 goal achievement pressure
-- 'Invest in yourself before the year ends' messaging
-- Limited-time bonus structure"
+                <div class="example-variable">
+                    <div class="variable-name">{{tone_style}}</div>
+                    <div class="variable-value">Conversational yet authoritative, empathetic but direct, with touches of humor</div>
                 </div>
                 
-                <h4>Product Launch Additions:</h4>
-                <div class="code-block">
-"PRODUCT LAUNCH CONTEXT:
-- Beta tester feedback and results
-- Founder story behind the creation
-- Limited founding member pricing
-- Implementation timeline and milestones
-- Community access and networking benefits
-- Early adopter advantages"
+                <div class="example-variable">
+                    <div class="variable-name">{{voice_examples}}</div>
+                    <div class="variable-value">"Look, I get it..." / "Here's the thing most people don't realize..." / "Let me be brutally honest..."</div>
                 </div>
+                
+                <div class="example-variable">
+                    <div class="variable-name">{{common_pain_point}}</div>
+                    <div class="variable-value">Stuck at the same revenue plateau despite working harder and creating more content</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-warning">
+                <strong>To customize for your business:</strong> Replace the values above with your specific details, keeping the same structure and level of detail.
             </div>
         </div>
 
-        <!-- Expected Results -->
-        <div class="section fade-in" id="results">
+        <!-- Results -->
+        <div class="section fade-in">
             <div class="section-header">
                 <div class="section-icon">📊</div>
-                <h2>Expected Results & Timeline</h2>
+                <h2>Expected Results</h2>
             </div>
             
-            <div class="alert alert-success">
-                <h3>Proven Performance Improvements</h3>
-                <div class="stats-dashboard">
-                    <div class="stat-card">
-                        <span class="stat-number">40-60%</span>
-                        <div class="stat-label">Faster Copy Creation</div>
-                        <div class="stat-description">From hours to minutes per piece</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">25-40%</span>
-                        <div class="stat-label">Higher Conversion Rates</div>
-                        <div class="stat-description">Across all marketing channels</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100%</span>
-                        <div class="stat-label">Brand Voice Consistency</div>
-                        <div class="stat-description">Every piece sounds like you</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">70%</span>
-                        <div class="stat-label">Reduction in Revisions</div>
-                        <div class="stat-description">Get it right the first time</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">∞</span>
-                        <div class="stat-label">Unlimited Scalability</div>
-                        <div class="stat-description">Generate content for any channel</div>
-                    </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">90%</span>
+                    <div class="stat-label">Time Saved</div>
                 </div>
-            </div>
-            
-            <h3>Implementation Timeline</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Week 1</h4>
-                    <p><strong>System Setup</strong><br>Customize core variables, load into AI, test basic functionality</p>
+                <div class="stat-card">
+                    <span class="stat-number">3x</span>
+                    <div class="stat-label">Better Quality</div>
                 </div>
-                <div class="timeline-item">
-                    <h4>Week 2-3</h4>
-                    <p><strong>Testing & Refinement</strong><br>Generate copy for different channels, refine based on performance</p>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <div class="stat-label">Brand Consistency</div>
                 </div>
-                <div class="timeline-item">
-                    <h4>Week 4+</h4>
-                    <p><strong>Full Deployment</strong><br>Scale across all marketing activities, train team members</p>
+                <div class="stat-card">
+                    <span class="stat-number">30min</span>
+                    <div class="stat-label">Setup Time</div>
                 </div>
-                <div class="timeline-item">
-                    <h4>Month 2+</h4>
-                    <p><strong>Optimization Phase</strong><br>Track metrics, update system, achieve peak performance</p>
-                </div>
-            </div>
-            
-            <div class="alert alert-info">
-                <h4>💡 Pro Tip: Compound Results</h4>
-                <p>The system gets better over time as you add more successful copy examples, refine your voice, and update your frameworks. Users typically see their best results in months 3-6 after implementation.</p>
             </div>
         </div>
 
-
-
-        <!-- Conclusion -->
-        <div class="section fade-in" id="conclusion">
+        <!-- Final Summary -->
+        <div class="section fade-in">
             <div class="section-header">
                 <div class="section-icon">🎯</div>
-                <h2>Ready to Transform Your Marketing?</h2>
+                <h2>Ready to Get Started?</h2>
             </div>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">The Product Memory System™ transforms AI models into expert copywriters who understand your business at a deep level. By investing time in proper customization, you'll have a scalable copy generation system that maintains brand consistency while dramatically improving conversion rates.</p>
             
             <div class="alert alert-success">
-                <h3>💡 The Bottom Line</h3>
-                <p><strong>The quality of your output depends entirely on the quality of your input.</strong> Take time to properly customize every variable for maximum effectiveness. The businesses seeing 40%+ conversion improvements all have one thing in common: they invested in detailed system customization.</p>
+                <h3>What you just learned:</h3>
+                <ul style="margin-top: 1rem;">
+                    <li>Download and fill out the Product Memory System™ template once</li>
+                    <li>Paste it into AI before every email writing session</li>
+                    <li>Get personalized, on-brand emails that convert better</li>
+                    <li>Save 90% of your time while improving email quality</li>
+                </ul>
             </div>
             
-            <div class="roi-calculator" style="text-align: center;">
-                <h3>🚀 Your Next Step</h3>
-                <p style="margin-bottom: 2rem;">Don't let another month go by struggling with generic AI copy that sounds like everyone else. Download the complete Product Memory System™ and start generating high-converting, on-brand copy in the next 30 minutes.</p>
+            <p style="font-size: 1.1rem; margin: 2rem 0;"><strong>Next action:</strong> Download the template, spend 30 minutes filling it out with your business details, then test it with your next email. You'll immediately see the difference in quality and personalization.</p>
+            
+            <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://drive.google.com/file/d/1AsyS54Vw3sOHgxdb05LeqDZmUdiL7LwG/view?usp=drive_link" class="primary-btn" style="font-size: 1.2rem; padding: 1.5rem 3rem;">
-                    📥 Get Complete System + All Bonuses
+                    📥 Download Complete System Now
                 </a>
-                <p style="margin-top: 1rem; opacity: 0.8;">Instant download • Works with any AI model • Complete implementation guide included</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">Instant download • Works with any AI • 30-minute setup</p>
+            </div>
+            
+            <div class="alert alert-info" style="margin-top: 2rem;">
+                <strong>Remember:</strong> The more specific and detailed you are in your setup, the better your results will be. Generic inputs = generic outputs. Specific inputs = breakthrough copy.
             </div>
         </div>
     </div>
@@ -1519,29 +770,19 @@ Version: 2.1 | Last Updated: [Date] | Performance: [Metrics]"
             }, observerOptions);
 
             // Apply fade-in to all sections
-            document.querySelectorAll('.section, .stats-dashboard').forEach(section => {
+            document.querySelectorAll('.section').forEach(section => {
                 section.style.opacity = '0';
                 section.style.transform = 'translateY(30px)';
                 section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(section);
             });
 
-            // Animate progress bars
-            const progressBars = document.querySelectorAll('.progress-bar');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-
-            // Add hover effects to feature cards
-            document.querySelectorAll('.feature-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
+            // Add hover effects to process steps
+            document.querySelectorAll('.process-step').forEach(step => {
+                step.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-8px) scale(1.02)';
                 });
-                card.addEventListener('mouseleave', function() {
+                step.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
@@ -1558,22 +799,6 @@ Version: 2.1 | Last Updated: [Date] | Performance: [Metrics]"
                         });
                     }
                 });
-            });
-
-            // Add typing animation to code blocks
-            const codeBlocks = document.querySelectorAll('.code-block');
-            codeBlocks.forEach(block => {
-                const text = block.textContent;
-                block.textContent = '';
-                let i = 0;
-                const typing = setInterval(() => {
-                    if (i < text.length) {
-                        block.textContent += text.charAt(i);
-                        i++;
-                    } else {
-                        clearInterval(typing);
-                    }
-                }, 20);
             });
         });
     </script>
