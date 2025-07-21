@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Memory System™ - Complete Advanced Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --info-color: #3b82f6;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border-radius: 30px;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(120, 119, 198, 0.3), transparent 70%),
+                       radial-gradient(circle at 70% 80%, rgba(255, 119, 198, 0.3), transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem 2rem;
+            background: var(--glass-bg);
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #4f46e5, #7c3aed);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .brand-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f9ff, #ddd6fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .primary-btn {
+            background: linear-gradient(45deg, var(--success-color), #059669);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .toc h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--success-color);
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .toc-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .toc-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Introduction Box */
+        .intro-box {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        /* Section Styling */
+        .section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--glass-border);
+            position: relative;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--glass-border);
+        }
+        
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--info-color), #1d4ed8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #f0f9ff;
+            font-weight: 600;
+        }
+        
+        /* Variable Input Styling */
+        .variable-group {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--info-color);
+        }
+        
+        .variable-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .variable-name {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, var(--info-color), #1d4ed8);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .variable-definition {
+            font-weight: 600;
+            color: #f0f9ff;
+            margin-bottom: 0.75rem;
+        }
+        
+        .variable-example {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            padding: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid var(--success-color);
+        }
+        
+        .variable-purpose {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        /* Alert Boxes */
+        .alert {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 1px solid;
+            position: relative;
+            padding-left: 3.5rem;
+        }
+        
+        .alert::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        .alert-success {
+            background: linear-gradient(45deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.15));
+            border-color: var(--success-color);
+        }
+        
+        .alert-success::before {
+            background: var(--success-color);
+        }
+        
+        .alert-info {
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.15));
+            border-color: var(--info-color);
+        }
+        
+        .alert-info::before {
+            background: var(--info-color);
+        }
+        
+        .alert-warning {
+            background: linear-gradient(45deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.15));
+            border-color: var(--warning-color);
+        }
+        
+        .alert-warning::before {
+            background: var(--warning-color);
+        }
+        
+        .alert-error {
+            background: linear-gradient(45deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.15));
+            border-color: var(--error-color);
+        }
+        
+        .alert-error::before {
+            background: var(--error-color);
+        }
+        
+        /* Progress Indicator */
+        .progress-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success-color), var(--info-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Variable Counter */
+        .variable-counter {
+            background: var(--success-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        
+        /* Collapsible Sections */
+        .collapsible {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .collapsible::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .collapsible.collapsed::after {
+            transform: rotate(-90deg);
+        }
+        
+        .collapsible-content {
+            max-height: 10000px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .collapsible-content.collapsed {
+            max-height: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 2rem;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero fade-in">
+            <div class="hero-content">
+                <div class="logo-container">
+                    <div class="logo">🔧</div>
+                    <span class="brand-text">Product Memory System™</span>
+                </div>
+                <h1>Complete Advanced Setup Guide</h1>
+                <p class="subtitle">Master all 106+ variables for [INSERT PRODUCT/OFFER NAME]. This comprehensive guide covers every section from the original PDF template for maximum AI copywriting performance.</p>
+                
+                <a href="https://drive.google.com/file/d/1AsyS54Vw3sOHgxdb05LeqDZmUdiL7LwG/view?usp=drive_link" class="primary-btn">
+                    📥 Download Complete Template
+                </a>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="intro-box fade-in">
+            <h3>💡 This document serves as a contextual memory block to preload into ChatGPT, Claude, or Gemini for generating high-converting marketing copy that sounds like a top-tier marketer with deep audience understanding.</h3>
+            <p style="margin-top: 1rem; opacity: 0.9;">This comprehensive guide covers all 14 sections and 106+ variables from the original Product Memory System™ PDF. Each variable is explained with definition, example, and purpose to help you create the most detailed AI context possible.</p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc fade-in">
+            <h3>📋 Complete System Structure (106+ Variables)</h3>
+            <div class="toc-grid">
+                <div class="toc-item">
+                    <a href="#customer-persona" class="toc-link">👥 Customer Persona (4 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#offer-details" class="toc-link">💰 Offer Details (4 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#voice-brand" class="toc-link">🎨 Voice & Brand Style (9 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#proof-positioning" class="toc-link">🏆 Proof & Positioning (4 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#core-framework" class="toc-link">🎯 Core Framework/Method (8 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#pain-points" class="toc-link">😰 Pain Points & Objections (17 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#transformation" class="toc-link">🦋 Transformation & Outcomes (6 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#strategic-messaging" class="toc-link">📢 Strategic Messaging (15 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#solution-architecture" class="toc-link">🏗️ Solution Architecture (11 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#implementation-phases" class="toc-link">🚀 Implementation Phases (5 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#social-proof" class="toc-link">⭐ Social Proof & Case Studies (6 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#mindset-psychology" class="toc-link">🧠 Mindset & Psychology (6 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#competitive-positioning" class="toc-link">⚔️ Competitive Positioning (5 variables)</a>
+                </div>
+                <div class="toc-item">
+                    <a href="#framework-components" class="toc-link">🔧 Framework Components (4 variables)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Persona Section -->
+        <div class="section fade-in" id="customer-persona">
+            <div class="section-header">
+                <div class="section-icon">👥</div>
+                <h2 class="collapsible">Customer Persona <span class="variable-counter">4 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{audience_type}}</div>
+                        <div class="variable-definition">Definition: The primary demographic or professional group your offer serves</div>
+                        <div class="variable-example">Example: "Online course creators struggling to scale beyond $10K/month"</div>
+                        <div class="variable-purpose">Purpose: Ensures all copy speaks directly to the right audience with appropriate language and pain points</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{audience_profile}}</div>
+                        <div class="variable-definition">Definition: Detailed psychographic and demographic breakdown of ideal customer</div>
+                        <div class="variable-example">Example: "35-45 year old entrepreneurs, mostly female, with 2-5 years business experience, tech-savvy but overwhelmed by marketing complexity"</div>
+                        <div class="variable-purpose">Purpose: Provides nuanced understanding for tone, examples, and messaging depth</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{purchase_intent}}</div>
+                        <div class="variable-definition">Definition: The buying readiness and motivation level of your target audience</div>
+                        <div class="variable-example">Example: "High intent - actively seeking solutions, have budget allocated, frustrated with current results"</div>
+                        <div class="variable-purpose">Purpose: Calibrates urgency, scarcity, and decision-making triggers in copy</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{industry}}</div>
+                        <div class="variable-definition">Definition: The specific industry or market vertical your audience operates in</div>
+                        <div class="variable-example">Example: "Digital marketing and online education space"</div>
+                        <div class="variable-purpose">Purpose: Ensures industry-specific language, references, and credibility markers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offer Details Section -->
+        <div class="section fade-in" id="offer-details">
+            <div class="section-header">
+                <div class="section-icon">💰</div>
+                <h2 class="collapsible">Offer Details <span class="variable-counter">4 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{offer}}</div>
+                        <div class="variable-definition">Definition: The core product or service being sold</div>
+                        <div class="variable-example">Example: "90-day intensive program teaching the 'Revenue Multiplication Method' for scaling online courses"</div>
+                        <div class="variable-purpose">Purpose: Provides clear offer positioning and value proposition foundation</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{price_point}}</div>
+                        <div class="variable-definition">Definition: The investment level required for your offer</div>
+                        <div class="variable-example">Example: "$2,997 or 3 payments of $1,097"</div>
+                        <div class="variable-purpose">Purpose: Frames value justification and objection handling around price</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{bonus_offer}}</div>
+                        <div class="variable-definition">Definition: Additional value-adds or incentives included with main offer</div>
+                        <div class="variable-example">Example: "Bonus: Private mastermind access ($1,500 value) + done-for-you email templates ($500 value)"</div>
+                        <div class="variable-purpose">Purpose: Enhances perceived value and provides urgency/scarcity elements</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{free_resource}}</div>
+                        <div class="variable-definition">Definition: Lead magnet or free content used to attract prospects</div>
+                        <div class="variable-example">Example: "The Course Creator's Revenue Scaling Blueprint - 47-page guide revealing the 3-step method"</div>
+                        <div class="variable-purpose">Purpose: Establishes authority and provides content upgrade opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Voice & Brand Style Section -->
+        <div class="section fade-in" id="voice-brand">
+            <div class="section-header">
+                <div class="section-icon">🎨</div>
+                <h2 class="collapsible">Voice & Brand Style <span class="variable-counter">9 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{tone_style}}</div>
+                        <div class="variable-definition">Definition: The overall communication style and personality</div>
+                        <div class="variable-example">Example: "Conversational yet authoritative, empathetic but direct, with touches of humor and vulnerability"</div>
+                        <div class="variable-purpose">Purpose: Maintains consistent brand voice across all copy</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{tone_examples}}</div>
+                        <div class="variable-definition">Definition: Specific phrases or sentence structures that exemplify your voice</div>
+                        <div class="variable-example">Example: "Look, I get it..." / "Here's the thing most people don't realize..." / "Let me be brutally honest..."</div>
+                        <div class="variable-purpose">Purpose: Provides concrete examples for AI to mimic specific speech patterns</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{personality_traits}}</div>
+                        <div class="variable-definition">Definition: Core character traits that define your brand personality</div>
+                        <div class="variable-example">Example: "Straight-talking, results-obsessed, anti-fluff, champion of the underdog"</div>
+                        <div class="variable-purpose">Purpose: Shapes the emotional undertone and relatability of all messaging</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{unique_approach}}</div>
+                        <div class="variable-definition">Definition: What makes your methodology or perspective different from competitors</div>
+                        <div class="variable-example">Example: "Focus on 'Revenue Multiplication' rather than traffic generation - working smarter, not harder"</div>
+                        <div class="variable-purpose">Purpose: Differentiates your messaging and positions unique value</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{voice_examples}}</div>
+                        <div class="variable-definition">Definition: Actual sentences or paragraphs written in your authentic voice</div>
+                        <div class="variable-example">Example: "Most course creators are trapped in the 'more content' hamster wheel. They think the answer is another module, another bonus, another launch. But here's what I've learned after helping 500+ creators scale..."</div>
+                        <div class="variable-purpose">Purpose: Gives AI specific voice modeling examples to replicate</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{unconventional_way}}</div>
+                        <div class="variable-definition">Definition: How your approach goes against industry conventional wisdom</div>
+                        <div class="variable-example">Example: "While everyone else teaches 'build it and they will come,' I teach 'validate demand first, then build the minimum viable solution that sells'"</div>
+                        <div class="variable-purpose">Purpose: Creates contrarian positioning that cuts through market noise</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{brand_personality}}</div>
+                        <div class="variable-definition">Definition: The human characteristics your brand embodies</div>
+                        <div class="variable-example">Example: "The wise mentor who's been there, done that, and isn't afraid to call out BS in the industry"</div>
+                        <div class="variable-purpose">Purpose: Ensures consistent personality across all touchpoints</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{personality_demonstrations}}</div>
+                        <div class="variable-definition">Definition: Specific ways your personality shows up in content</div>
+                        <div class="variable-example">Example: "Uses data to back up claims, shares personal failures openly, calls out 'guru' tactics, always provides actionable next steps"</div>
+                        <div class="variable-purpose">Purpose: Provides behavioral guidelines for authentic content creation</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{personal_quirks}}</div>
+                        <div class="variable-definition">Definition: Unique mannerisms or habits that make your brand memorable</div>
+                        <div class="variable-example">Example: "Always starts emails with 'Quick question...' / Uses sports analogies / References 90s pop culture"</div>
+                        <div class="variable-purpose">Purpose: Adds distinctive flavor that makes content instantly recognizable</div>
+                    </div>
+                </div>
+
+                <div class="alert alert-error">
+                    <strong>Critical:</strong> This is the most important section for brand consistency. Spend extra time on voice examples - use actual sentences from your best-performing content.
+                </div>
+            </div>
+        </div>
+
+        <!-- Proof & Positioning Section -->
+        <div class="section fade-in" id="proof-positioning">
+            <div class="section-header">
+                <div class="section-icon">🏆</div>
+                <h2 class="collapsible">Proof & Positioning <span class="variable-counter">4 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{testimonial}}</div>
+                        <div class="variable-definition">Definition: Powerful customer success story or social proof</div>
+                        <div class="variable-example">Example: "Sarah went from $8K to $47K months in 90 days using the Revenue Multiplication Method"</div>
+                        <div class="variable-purpose">Purpose: Provides credibility and outcome proof for copy integration</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{sarah_result}}</div>
+                        <div class="variable-definition">Definition: Detailed case study of a specific client success</div>
+                        <div class="variable-example">Example: "Sarah Martinez, course creator from Austin, TX - scaled from $8K to $47K monthly revenue in 90 days without increasing ad spend or creating new content"</div>
+                        <div class="variable-purpose">Purpose: Offers concrete proof story for longer-form copy and case studies</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_achievement}}</div>
+                        <div class="variable-definition">Definition: Quantifiable result that demonstrates your expertise</div>
+                        <div class="variable-example">Example: "Generated over $2.3M in revenue for clients using this method in the last 12 months"</div>
+                        <div class="variable-purpose">Purpose: Establishes authority and validates methodology</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{measurable_result}}</div>
+                        <div class="variable-definition">Definition: Specific, trackable outcome your method produces</div>
+                        <div class="variable-example">Example: "Average 340% revenue increase within 90 days"</div>
+                        <div class="variable-purpose">Purpose: Provides concrete expectations and goal-setting for prospects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Framework Section -->
+        <div class="section fade-in" id="core-framework">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2 class="collapsible">Core Framework / Method <span class="variable-counter">8 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{core_framework}}</div>
+                        <div class="variable-definition">Definition: The signature system or methodology you teach</div>
+                        <div class="variable-example">Example: "The Revenue Multiplication Method: Optimize → Amplify → Scale"</div>
+                        <div class="variable-purpose">Purpose: Provides structure for educational content and positions unique IP</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{signature_method}}</div>
+                        <div class="variable-definition">Definition: Your proprietary approach or system name</div>
+                        <div class="variable-example">Example: "The 90-Day Revenue Multiplication Method"</div>
+                        <div class="variable-purpose">Purpose: Creates memorable, trademark-able positioning</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{implementation_method}}</div>
+                        <div class="variable-definition">Definition: How clients actually apply your teachings</div>
+                        <div class="variable-example">Example: "Week-by-week implementation guide with daily action steps and progress tracking"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates practical application and reduces perceived complexity</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{core_strategy}}</div>
+                        <div class="variable-definition">Definition: The overarching strategic approach</div>
+                        <div class="variable-example">Example: "Focus on maximizing revenue per existing customer before acquiring new ones"</div>
+                        <div class="variable-purpose">Purpose: Provides strategic foundation for all tactical advice</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{first_step_of_your_method}}</div>
+                        <div class="variable-definition">Definition: The initial phase of your methodology</div>
+                        <div class="variable-example">Example: "Revenue Audit: Identify the 3 biggest revenue leaks in your current funnel"</div>
+                        <div class="variable-purpose">Purpose: Provides clear starting point and immediate value</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{second_step_of_your_method}}</div>
+                        <div class="variable-definition">Definition: The middle phase of your methodology</div>
+                        <div class="variable-example">Example: "Conversion Optimization: Implement the 5 high-impact changes that typically double sales"</div>
+                        <div class="variable-purpose">Purpose: Shows progression and builds on initial momentum</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{third_step_of_your_method}}</div>
+                        <div class="variable-definition">Definition: The final phase of your methodology</div>
+                        <div class="variable-example">Example: "Scale Systems: Deploy automated sequences that maintain conversion rates at higher volume"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates complete transformation and sustainable results</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{explanation_of_each_step}}</div>
+                        <div class="variable-definition">Definition: Detailed breakdown of what happens in each phase</div>
+                        <div class="variable-example">Example: "Phase 1 focuses on stopping revenue bleeding, Phase 2 optimizes existing traffic, Phase 3 scales what's working"</div>
+                        <div class="variable-purpose">Purpose: Provides educational content structure and proof of systematic approach</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pain Points & Objections Section -->
+        <div class="section fade-in" id="pain-points">
+            <div class="section-header">
+                <div class="section-icon">😰</div>
+                <h2 class="collapsible">Pain Points & Objections <span class="variable-counter">17 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{common_pain_point}}</div>
+                        <div class="variable-definition">Definition: The primary problem your audience faces</div>
+                        <div class="variable-example">Example: "Stuck at the same revenue plateau despite working harder and creating more content"</div>
+                        <div class="variable-purpose">Purpose: Ensures copy resonates with audience's current frustrations</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{pain_point}}</div>
+                        <div class="variable-definition">Definition: Specific manifestation of the core problem</div>
+                        <div class="variable-example">Example: "Feeling like you're on a hamster wheel - working 60+ hour weeks but revenue stays flat"</div>
+                        <div class="variable-purpose">Purpose: Creates emotional connection and urgency</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{obvious_challenges_in_your_industry}}</div>
+                        <div class="variable-definition">Definition: Well-known problems everyone in your space acknowledges</div>
+                        <div class="variable-example">Example: "Ad costs rising, organic reach declining, competition increasing, customer acquisition getting harder"</div>
+                        <div class="variable-purpose">Purpose: Establishes credibility by acknowledging shared industry challenges</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_manifestations_of_the_pain_point}}</div>
+                        <div class="variable-definition">Definition: How the core problem shows up in daily life</div>
+                        <div class="variable-example">Example: "Checking your Stripe dashboard obsessively, feeling anxious about monthly recurring revenue, constantly launching new products hoping one will break through"</div>
+                        <div class="variable-purpose">Purpose: Creates specific recognition and emotional resonance</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_way_problem_derails_progress}}</div>
+                        <div class="variable-definition">Definition: How the pain point specifically sabotages success</div>
+                        <div class="variable-example">Example: "You end up creating more content instead of optimizing what's working, diluting your message and confusing your audience"</div>
+                        <div class="variable-purpose">Purpose: Highlights consequences and urgency for change</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{systemic_cause_of_the_problem}}</div>
+                        <div class="variable-definition">Definition: The root cause behind surface-level symptoms</div>
+                        <div class="variable-example">Example: "The 'more is better' mentality that's been programmed into entrepreneurs by the content marketing industry"</div>
+                        <div class="variable-purpose">Purpose: Provides deeper understanding and positions solution as addressing root cause</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{reassuring_reframe}}</div>
+                        <div class="variable-definition">Definition: How you help prospects see their situation differently</div>
+                        <div class="variable-example">Example: "It's not that you're not working hard enough - you're just working on the wrong things"</div>
+                        <div class="variable-purpose">Purpose: Removes shame and blame while positioning solution</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_example_of_systemic_problem}}</div>
+                        <div class="variable-definition">Definition: Concrete example of how the root cause manifests</div>
+                        <div class="variable-example">Example: "Course creators spending 80% of their time creating content and only 20% optimizing their sales process"</div>
+                        <div class="variable-purpose">Purpose: Makes abstract concepts tangible and relatable</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{common_mistake}}</div>
+                        <div class="variable-definition">Definition: Typical error your audience makes when trying to solve their problem</div>
+                        <div class="variable-example">Example: "Thinking they need more traffic when they actually need better conversion"</div>
+                        <div class="variable-purpose">Purpose: Prevents audience from pursuing wrong solutions</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{natural_but_wrong_response}}</div>
+                        <div class="variable-definition">Definition: The logical but counterproductive action most people take</div>
+                        <div class="variable-example">Example: "Creating more lead magnets and courses instead of optimizing existing ones"</div>
+                        <div class="variable-purpose">Purpose: Validates their past attempts while redirecting toward better approach</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{why_this_approach_backfires}}</div>
+                        <div class="variable-definition">Definition: The reason the obvious solution doesn't work</div>
+                        <div class="variable-example">Example: "More offers confuse buyers and dilute your positioning, making it harder to become known for solving one specific problem"</div>
+                        <div class="variable-purpose">Purpose: Educates audience and builds case for your alternative approach</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{detailed_example_of_this_mistake_in_action}}</div>
+                        <div class="variable-definition">Definition: Story showing how the wrong approach plays out</div>
+                        <div class="variable-example">Example: "I watched a client launch 5 different courses in 6 months, each one performing worse than the last, because she never optimized her original $97 offer that was converting at 0.5%"</div>
+                        <div class="variable-purpose">Purpose: Provides cautionary tale and social proof</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_version_of_this_mistake}}</div>
+                        <div class="variable-definition">Definition: How you personally made this same error</div>
+                        <div class="variable-example">Example: "I did this too - had 12 different digital products generating $200 each instead of one generating $2,400"</div>
+                        <div class="variable-purpose">Purpose: Builds credibility and relatability through vulnerability</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{cultural_reason_people_make_this_mistake}}</div>
+                        <div class="variable-definition">Definition: The societal or industry conditioning that leads to this error</div>
+                        <div class="variable-example">Example: "We've been taught that 'hustle harder' is the answer to every business problem"</div>
+                        <div class="variable-purpose">Purpose: Removes personal blame and positions solution as counter-cultural</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{cultural_belief_that_leads_to_this_mistake}}</div>
+                        <div class="variable-definition">Definition: The underlying belief system causing the problem</div>
+                        <div class="variable-example">Example: "The belief that 'more value' always equals 'more sales' when the opposite is often true"</div>
+                        <div class="variable-purpose">Purpose: Addresses mindset shift needed for solution to work</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{common_self_doubt}}</div>
+                        <div class="variable-definition">Definition: Internal dialogue that prevents taking action</div>
+                        <div class="variable-example">Example: "Maybe I'm not cut out for this, maybe I don't have what it takes to scale"</div>
+                        <div class="variable-purpose">Purpose: Addresses psychological barriers to purchasing</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{timing_excuses}}</div>
+                        <div class="variable-definition">Definition: Reasons people give for delaying action</div>
+                        <div class="variable-example">Example: "I'll focus on this after I finish my current launch / after the holidays / when I have more time"</div>
+                        <div class="variable-purpose">Purpose: Overcomes procrastination and creates urgency</div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>Pain Point Mastery:</strong> This is the largest and most critical section. The more precisely you can articulate their pain, the more they'll trust you have the solution.
+                </div>
+            </div>
+        </div>
+
+        <!-- Transformation & Outcomes Section -->
+        <div class="section fade-in" id="transformation">
+            <div class="section-header">
+                <div class="section-icon">🦋</div>
+                <h2 class="collapsible">Transformation & Outcomes <span class="variable-counter">6 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{desired_outcome}}</div>
+                        <div class="variable-definition">Definition: What your audience ultimately wants to achieve</div>
+                        <div class="variable-example">Example: "Predictable $25K+ monthly revenue without working 80-hour weeks"</div>
+                        <div class="variable-purpose">Purpose: Anchors all messaging to aspirational end state</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{before_state}}</div>
+                        <div class="variable-definition">Definition: Where clients are before working with you</div>
+                        <div class="variable-example">Example: "Inconsistent revenue, constantly stressed about money, working nights and weekends"</div>
+                        <div class="variable-purpose">Purpose: Creates contrast and amplifies transformation</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{after_state}}</div>
+                        <div class="variable-definition">Definition: Where clients are after implementing your solution</div>
+                        <div class="variable-example">Example: "Predictable revenue, confident in their business model, working 40-hour weeks with better results"</div>
+                        <div class="variable-purpose">Purpose: Paints picture of achievable transformation</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{transformation_result}}</div>
+                        <div class="variable-definition">Definition: The overall change clients experience</div>
+                        <div class="variable-example">Example: "From stressed solopreneur to confident business owner with scalable systems"</div>
+                        <div class="variable-purpose">Purpose: Summarizes the complete transformation journey</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{achieve_desired_outcome}}</div>
+                        <div class="variable-definition">Definition: Specific steps to reach the transformation</div>
+                        <div class="variable-example">Example: "By implementing the 3-phase Revenue Multiplication Method and focusing on optimization before expansion"</div>
+                        <div class="variable-purpose">Purpose: Provides path to transformation and builds confidence</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{empowering_message_about_their_ability_to_solve_problem}}</div>
+                        <div class="variable-definition">Definition: Encouraging message about their capability</div>
+                        <div class="variable-example">Example: "You already have everything you need to succeed - you just need the right strategy to unlock it"</div>
+                        <div class="variable-purpose">Purpose: Builds confidence and reduces intimidation factor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Messaging Section -->
+        <div class="section fade-in" id="strategic-messaging">
+            <div class="section-header">
+                <div class="section-icon">📢</div>
+                <h2 class="collapsible">Strategic Messaging Principles <span class="variable-counter">15 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{main_topic}}</div>
+                        <div class="variable-definition">Definition: The overarching subject matter you focus on</div>
+                        <div class="variable-example">Example: "Course revenue optimization and scaling strategies"</div>
+                        <div class="variable-purpose">Purpose: Centers all content around core expertise area</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_topic}}</div>
+                        <div class="variable-definition">Definition: Narrower area of specialization within main topic</div>
+                        <div class="variable-example">Example: "Revenue multiplication without increasing traffic or creating new content"</div>
+                        <div class="variable-purpose">Purpose: Positions unique angle and differentiates from competitors</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{business_area}}</div>
+                        <div class="variable-definition">Definition: The specific business function you help optimize</div>
+                        <div class="variable-example">Example: "Sales funnel conversion and customer lifetime value optimization"</div>
+                        <div class="variable-purpose">Purpose: Clarifies business impact and ROI focus</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_strategy}}</div>
+                        <div class="variable-definition">Definition: Your signature strategic approach</div>
+                        <div class="variable-example">Example: "The 'Optimize First, Scale Second' strategy that focuses on maximizing existing asset performance"</div>
+                        <div class="variable-purpose">Purpose: Provides memorable positioning and methodology branding</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{result_type}}</div>
+                        <div class="variable-definition">Definition: The category of outcomes you deliver</div>
+                        <div class="variable-example">Example: "Measurable revenue increases without proportional workload increases"</div>
+                        <div class="variable-purpose">Purpose: Sets expectations for transformation type</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{tool_name}}</div>
+                        <div class="variable-definition">Definition: Primary tool or platform you help optimize</div>
+                        <div class="variable-example">Example: "Online course platforms and sales funnels"</div>
+                        <div class="variable-purpose">Purpose: Attracts audiences using specific technology</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{process_type}}</div>
+                        <div class="variable-definition">Definition: The systematic method you use</div>
+                        <div class="variable-example">Example: "Data-driven optimization process with 30-day testing cycles"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates systematic, professional approach</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{technique_name}}</div>
+                        <div class="variable-definition">Definition: Specific techniques within your methodology</div>
+                        <div class="variable-example">Example: "The Revenue Leak Audit and Conversion Amplification techniques"</div>
+                        <div class="variable-purpose">Purpose: Creates intellectual property and unique positioning</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{metric}}</div>
+                        <div class="variable-definition">Definition: Primary success metric you focus on improving</div>
+                        <div class="variable-example">Example: "Monthly recurring revenue and customer lifetime value"</div>
+                        <div class="variable-purpose">Purpose: Aligns messaging with business outcomes</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_outcome}}</div>
+                        <div class="variable-definition">Definition: Concrete result clients can expect</div>
+                        <div class="variable-example">Example: "Double course revenue within 90 days without increasing marketing spend"</div>
+                        <div class="variable-purpose">Purpose: Provides clear success benchmark</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{main_tool}}</div>
+                        <div class="variable-definition">Definition: Essential tool for implementing your method</div>
+                        <div class="variable-example">Example: "Email marketing automation platforms and conversion tracking tools"</div>
+                        <div class="variable-purpose">Purpose: Helps prospects understand implementation requirements</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{advanced_technique}}</div>
+                        <div class="variable-definition">Definition: Sophisticated strategy for experienced users</div>
+                        <div class="variable-example">Example: "Behavioral trigger sequencing based on customer engagement patterns"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates depth of expertise and advanced capability</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_area}}</div>
+                        <div class="variable-definition">Definition: Precise domain of expertise</div>
+                        <div class="variable-example">Example: "Course creator revenue optimization in the $5K-$50K monthly range"</div>
+                        <div class="variable-purpose">Purpose: Attracts ideal client profile and repels wrong fit</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{key_metric}}</div>
+                        <div class="variable-definition">Definition: Most important KPI for client success</div>
+                        <div class="variable-example">Example: "Revenue per email subscriber and conversion rate optimization"</div>
+                        <div class="variable-purpose">Purpose: Focuses attention on highest-impact measurements</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{main_goal}}</div>
+                        <div class="variable-definition">Definition: Ultimate objective for your clients</div>
+                        <div class="variable-example">Example: "Build a profitable, sustainable online course business that generates consistent revenue"</div>
+                        <div class="variable-purpose">Purpose: Aligns all messaging with client's ultimate vision</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Architecture Section -->
+        <div class="section fade-in" id="solution-architecture">
+            <div class="section-header">
+                <div class="section-icon">🏗️</div>
+                <h2 class="collapsible">Solution Architecture <span class="variable-counter">11 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_alternative_approach}}</div>
+                        <div class="variable-definition">Definition: How your method differs from standard industry practice</div>
+                        <div class="variable-example">Example: "Instead of constantly creating new content, optimize existing assets for maximum revenue extraction"</div>
+                        <div class="variable-purpose">Purpose: Differentiates approach and challenges conventional thinking</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{explanation_of_the_key_difference}}</div>
+                        <div class="variable-definition">Definition: Clear articulation of what makes your approach unique</div>
+                        <div class="variable-example">Example: "Most focus on traffic volume; we focus on revenue per visitor - often achieving 3x results with same traffic"</div>
+                        <div class="variable-purpose">Purpose: Helps prospects understand the paradigm shift</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{natural_force_it_works_against}}</div>
+                        <div class="variable-definition">Definition: Market tendency your method counters</div>
+                        <div class="variable-example">Example: "The natural tendency to add complexity when simple optimization would solve the problem"</div>
+                        <div class="variable-purpose">Purpose: Positions solution as working with rather than against natural patterns</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{natural_force_it_works_with}}</div>
+                        <div class="variable-definition">Definition: Market principle your approach leverages</div>
+                        <div class="variable-example">Example: "Works with buyer psychology and natural purchase decision patterns"</div>
+                        <div class="variable-purpose">Purpose: Shows your method is aligned with natural principles</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_example_of_your_alternative_approach_working}}</div>
+                        <div class="variable-definition">Definition: Concrete case where your approach succeeded</div>
+                        <div class="variable-example">Example: "Maria's course revenue jumped from $12K to $38K monthly by optimizing her email sequence, not creating more courses"</div>
+                        <div class="variable-purpose">Purpose: Provides proof of concept and social validation</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{positive_outcome_of_your_approach}}</div>
+                        <div class="variable-definition">Definition: Beneficial result of following your method</div>
+                        <div class="variable-example">Example: "Clients work fewer hours while generating more revenue - the opposite of the industry hustle culture"</div>
+                        <div class="variable-purpose">Purpose: Highlights lifestyle and business benefits</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_approach_or_method}}</div>
+                        <div class="variable-definition">Definition: Summary of your systematic approach</div>
+                        <div class="variable-example">Example: "The Revenue Multiplication Method: Audit, Optimize, Scale - in that exact order"</div>
+                        <div class="variable-purpose">Purpose: Provides memorable framework for prospects to understand</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{why_your_approach_is_effective}}</div>
+                        <div class="variable-definition">Definition: The underlying reason your method works</div>
+                        <div class="variable-example">Example: "It focuses on fixing what's broken before building new, eliminating waste and maximizing existing investments"</div>
+                        <div class="variable-purpose">Purpose: Builds logical foundation for method adoption</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_alternative_focus}}</div>
+                        <div class="variable-definition">Definition: What you prioritize instead of common focus areas</div>
+                        <div class="variable-example">Example: "Focus on conversion optimization rather than traffic generation"</div>
+                        <div class="variable-purpose">Purpose: Redirects attention to higher-leverage activities</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{core_insight_that_makes_approach_work}}</div>
+                        <div class="variable-definition">Definition: Key principle underlying your methodology's effectiveness</div>
+                        <div class="variable-example">Example: "Most revenue problems are optimization problems, not traffic problems"</div>
+                        <div class="variable-purpose">Purpose: Provides foundational wisdom that guides decision-making</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_solution_or_approach}}</div>
+                        <div class="variable-definition">Definition: Complete description of your solution methodology</div>
+                        <div class="variable-example">Example: "Systematic revenue optimization through data-driven testing and customer behavior analysis"</div>
+                        <div class="variable-purpose">Purpose: Summarizes complete value proposition in one statement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Phases Section -->
+        <div class="section fade-in" id="implementation-phases">
+            <div class="section-header">
+                <div class="section-icon">🚀</div>
+                <h2 class="collapsible">Implementation Phases <span class="variable-counter">5 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{first_phase_of_solution}}</div>
+                        <div class="variable-definition">Definition: Initial step in your implementation process</div>
+                        <div class="variable-example">Example: "Revenue Audit Phase: Identify and document all current revenue streams and conversion points"</div>
+                        <div class="variable-purpose">Purpose: Provides clear starting point and builds momentum</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{second_phase_of_solution}}</div>
+                        <div class="variable-definition">Definition: Middle phase of implementation</div>
+                        <div class="variable-example">Example: "Optimization Phase: Test and improve the top 3 revenue-impacting elements"</div>
+                        <div class="variable-purpose">Purpose: Shows progression and building complexity</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{third_phase_of_solution}}</div>
+                        <div class="variable-definition">Definition: Final phase of implementation</div>
+                        <div class="variable-example">Example: "Scale Phase: Automate winning elements and expand successful strategies"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates complete transformation and sustainable results</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{what_happens_and_why_phase_1_matters}}</div>
+                        <div class="variable-definition">Definition: Detailed explanation of first phase importance</div>
+                        <div class="variable-example">Example: "Phase 1 creates baseline metrics and identifies quick wins - most clients see 20-30% improvements just from audit insights"</div>
+                        <div class="variable-purpose">Purpose: Builds confidence in methodology and sets expectations</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{key_principle_that_makes_step_2_work}}</div>
+                        <div class="variable-definition">Definition: Critical concept for second phase success</div>
+                        <div class="variable-example">Example: "Test one variable at a time - most optimization fails because people change too many things simultaneously"</div>
+                        <div class="variable-purpose">Purpose: Provides implementation wisdom and prevents common mistakes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Proof & Case Studies Section -->
+        <div class="section fade-in" id="social-proof">
+            <div class="section-header">
+                <div class="section-icon">⭐</div>
+                <h2 class="collapsible">Social Proof & Case Studies <span class="variable-counter">6 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{detailed_case_study_of_solution_working}}</div>
+                        <div class="variable-definition">Definition: Comprehensive success story with specific details</div>
+                        <div class="variable-example">Example: "Jennifer's Photography Course: $8K to $31K monthly in 4 months by optimizing her sales page (47% conversion increase) and email sequence (3x open rates)"</div>
+                        <div class="variable-purpose">Purpose: Provides detailed proof of methodology effectiveness</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{specific_results_from_implementing_solution}}</div>
+                        <div class="variable-definition">Definition: Quantified outcomes from your method</div>
+                        <div class="variable-example">Example: "Average 340% revenue increase within 90 days, with 89% of clients achieving at least 150% improvement"</div>
+                        <div class="variable-purpose">Purpose: Sets measurable expectations and builds confidence</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{how_solution_prevents_recurring_problem}}</div>
+                        <div class="variable-definition">Definition: How your method creates lasting change</div>
+                        <div class="variable-example">Example: "Creates systems that continue generating results - clients maintain growth without constant intervention"</div>
+                        <div class="variable-purpose">Purpose: Addresses sustainability concerns and long-term value</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{situation_1}}</div>
+                        <div class="variable-definition">Definition: First scenario where your solution applies</div>
+                        <div class="variable-example">Example: "Course creators stuck at $5K-$15K monthly wanting to break through to $25K+"</div>
+                        <div class="variable-purpose">Purpose: Helps prospects identify with applicable situations</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{situation_2}}</div>
+                        <div class="variable-definition">Definition: Second scenario where your solution applies</div>
+                        <div class="variable-example">Example: "Established course creators at $20K+ monthly who want to scale without burning out"</div>
+                        <div class="variable-purpose">Purpose: Expands applicability and attracts different client segments</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{situation_3}}</div>
+                        <div class="variable-definition">Definition: Third scenario where your solution applies</div>
+                        <div class="variable-example">Example: "Service providers transitioning to course models who need proven scaling strategies"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates versatility and broad applicability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mindset & Psychology Section -->
+        <div class="section fade-in" id="mindset-psychology">
+            <div class="section-header">
+                <div class="section-icon">🧠</div>
+                <h2 class="collapsible">Mindset & Psychology <span class="variable-counter">6 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{reframe_of_investment}}</div>
+                        <div class="variable-definition">Definition: How to think about the cost of your solution</div>
+                        <div class="variable-example">Example: "It's not a $3K expense - it's a revenue multiplier that typically pays for itself in the first 30 days"</div>
+                        <div class="variable-purpose">Purpose: Overcomes price objections with value-based thinking</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_core_belief_about_clients}}</div>
+                        <div class="variable-definition">Definition: Fundamental belief about your audience's potential</div>
+                        <div class="variable-example">Example: "Every course creator already has everything they need to succeed - they just need the right optimization strategy"</div>
+                        <div class="variable-purpose">Purpose: Empowers prospects and reduces intimidation factor</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{personal_doubt_story}}</div>
+                        <div class="variable-definition">Definition: Your own experience with self-doubt</div>
+                        <div class="variable-example">Example: "I spent 2 years convinced I needed more traffic, when a simple email sequence change tripled my revenue in 6 weeks"</div>
+                        <div class="variable-purpose">Purpose: Creates relatability and vulnerability to build trust</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{self_doubt_transformation}}</div>
+                        <div class="variable-definition">Definition: How overcoming doubt changed your perspective</div>
+                        <div class="variable-example">Example: "Realized that optimization beats creation every time - stopped the content hamster wheel and focused on what actually moves revenue"</div>
+                        <div class="variable-purpose">Purpose: Models the mindset shift needed for success</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{insight_about_timing_and_action}}</div>
+                        <div class="variable-definition">Definition: Wisdom about when to take action</div>
+                        <div class="variable-example">Example: "The best time to optimize was yesterday; the second best time is today - waiting for 'perfect conditions' is just procrastination"</div>
+                        <div class="variable-purpose">Purpose: Creates urgency and overcomes perfectionism</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{personal_example_of_starting_at_the_wrong_time}}</div>
+                        <div class="variable-definition">Definition: Story of taking action despite imperfect timing</div>
+                        <div class="variable-example">Example: "I started optimizing my course funnel during my busiest month ever - still saw 180% revenue increase because optimization doesn't require more time, just better strategy"</div>
+                        <div class="variable-purpose">Purpose: Overcomes timing objections with personal proof</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Positioning Section -->
+        <div class="section fade-in" id="competitive-positioning">
+            <div class="section-header">
+                <div class="section-icon">⚔️</div>
+                <h2 class="collapsible">Competitive Positioning <span class="variable-counter">5 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{traditional_approaches}}</div>
+                        <div class="variable-definition">Definition: How most competitors approach the problem</div>
+                        <div class="variable-example">Example: "Most marketing 'experts' tell you to create more content, launch more courses, and drive more traffic"</div>
+                        <div class="variable-purpose">Purpose: Sets up comparison and positions alternative approach</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{your_unique_insight}}</div>
+                        <div class="variable-definition">Definition: The contrarian wisdom that sets you apart</div>
+                        <div class="variable-example">Example: "Revenue problems are rarely traffic problems - they're optimization problems disguised as traffic problems"</div>
+                        <div class="variable-purpose">Purpose: Provides intellectual differentiation and thought leadership</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{inefficient_activity}}</div>
+                        <div class="variable-definition">Definition: Common activity that wastes time and resources</div>
+                        <div class="variable-example">Example: "Creating new lead magnets when your existing ones aren't optimized"</div>
+                        <div class="variable-purpose">Purpose: Helps prospects avoid common mistakes and time waste</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{traditional_costs}}</div>
+                        <div class="variable-definition">Definition: Hidden costs of conventional approaches</div>
+                        <div class="variable-example">Example: "The 'more content' approach costs you time, focus, and actually confuses your audience"</div>
+                        <div class="variable-purpose">Purpose: Highlights downside of alternative approaches</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{ineffective_alternatives}}</div>
+                        <div class="variable-definition">Definition: Popular solutions that don't actually work</div>
+                        <div class="variable-example">Example: "Social media marketing for course creators - high effort, low conversion, wrong audience focus"</div>
+                        <div class="variable-purpose">Purpose: Steers prospects away from less effective options</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Framework Components Section -->
+        <div class="section fade-in" id="framework-components">
+            <div class="section-header">
+                <div class="section-icon">🔧</div>
+                <h2 class="collapsible">Framework Components <span class="variable-counter">4 Variables</span></h2>
+            </div>
+            <div class="collapsible-content">
+                <div class="variable-group">
+                    <div class="variable-item">
+                        <div class="variable-name">{{component_A}}</div>
+                        <div class="variable-definition">Definition: First major component of your framework</div>
+                        <div class="variable-example">Example: "Revenue Audit System - comprehensive analysis of all revenue-generating assets and conversion points"</div>
+                        <div class="variable-purpose">Purpose: Breaks down methodology into digestible components</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{component_B}}</div>
+                        <div class="variable-definition">Definition: Second major component of your framework</div>
+                        <div class="variable-example">Example: "Conversion Optimization Protocol - systematic testing and improvement of highest-impact elements"</div>
+                        <div class="variable-purpose">Purpose: Demonstrates systematic approach and professional methodology</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{component_C}}</div>
+                        <div class="variable-definition">Definition: Third major component of your framework</div>
+                        <div class="variable-example">Example: "Scale Automation System - implementing systems that maintain performance at higher volumes"</div>
+                        <div class="variable-purpose">Purpose: Shows complete solution from start to sustainable scaling</div>
+                    </div>
+
+                    <div class="variable-item">
+                        <div class="variable-name">{{related_life_skill}}</div>
+                        <div class="variable-definition">Definition: Life skill that your business method develops</div>
+                        <div class="variable-example">Example: "Strategic thinking and data-driven decision making that applies to every area of business and life"</div>
+                        <div class="variable-purpose">Purpose: Expands value proposition beyond immediate business application</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Implementation Section -->
+        <div class="section fade-in" id="conclusion">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Complete Implementation Guide</h2>
+            </div>
+            
+            <div class="alert alert-success">
+                <h3>🎉 You now have access to the complete Product Memory System™</h3>
+                <p>This guide covers all 14 sections with 106+ variables for maximum AI copywriting performance.</p>
+            </div>
+
+            <h3>🚀 How to Load Your Complete System:</h3>
+            <div style="background: rgba(0, 0, 0, 0.2); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; font-family: monospace;">
+                <p style="margin-bottom: 1rem; color: var(--success-color);">Step 1: Fill in all 106+ variables with your specific information</p>
+                <p style="margin-bottom: 1rem; color: var(--info-color);">Step 2: Copy your completed system and paste into AI</p>
+                <p style="margin-bottom: 1rem; color: var(--warning-color);">Step 3: Add this activation prompt:</p>
+                <p style="font-style: italic; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 5px;">
+                    "You are now loaded with my Product Memory System™. Act as an expert copywriter who knows my brand, audience, and methodology intimately. Every piece of copy you create must reflect my authentic voice, address my audience's specific pain points, and align with my proven framework. Ready to write high-converting copy?"
+                </p>
+                <p style="margin-top: 1rem; color: var(--success-color);">Step 4: Start requesting high-converting copy for any channel</p>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>Remember:</strong> This Product Memory System™ can be loaded into any AI model to generate marketing copy that authentically represents your brand, understands your audience deeply, and converts at the highest levels. Simply replace the example values with your specific information and use as context for any marketing copy generation.
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://drive.google.com/file/d/1AsyS54Vw3sOHgxdb05LeqDZmUdiL7LwG/view?usp=drive_link" class="primary-btn" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
+                    📥 Download Complete Product Memory System™ (106+ Variables)
+                </a>
+                <p style="margin-top: 1rem; opacity: 0.8;">Get the full template with all 14 sections and complete variable set from the original PDF</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Progress tracking
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Collapsible sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            
+            collapsibles.forEach(function(collapsible) {
+                collapsible.addEventListener('click', function() {
+                    this.classList.toggle('collapsed');
+                    const content = this.parentElement.nextElementSibling;
+                    content.classList.toggle('collapsed');
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
